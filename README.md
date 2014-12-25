@@ -14,7 +14,8 @@ Use it
       (:require-macros [m-xhrio.macros :refer [let-xhr]])
       (:require [m-xhrio.xhr]))
   
-    (let-xhr [a {:url "http://localhost:3000/" :method :get}]
+    (let-xhr [a {:url "http://localhost:3000/" :method :get}
+              b {:url "http://localhost:3000/" :method :post :content "fooobaaar"}]
       (.log js/console (.getResponseText a)))
 
 ## Changes
