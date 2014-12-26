@@ -14,7 +14,8 @@ Use it
       (:require-macros [m-xhrio.macros :refer [let-xhr]])
       (:require [m-xhrio.xhr]))
   
-    ; the followinf is fully asynchronous, the body will only be run once both a and b will have been completed
+    ; the following is fully asynchronous
+    ; the body will only be run once both a and b will have been completed
     (let-xhr [a {:url "http://localhost:3000/" :method :get}
               b {:url "http://localhost:3000/" :method :post :content "fooobaaar"}]
       (.log js/console (.getResponseText a)))
